@@ -26,11 +26,11 @@ class ArduinoSerial:  # class for communication with arduino via serial, starts 
         self.interval = 0.02  # arduino loop running at 20 ms
 
     def serialSend(self, FR_angles,FL_angles,BR_angles,BL_angles):
-        comando = "<{0}#{1}#{2}#{3}#{4}#{5}#{6}#{7}#{8}#{9}#{10}#{11}>"  # Input
-        command = comando.format(int(np.rad2deg(FR_angles[0])), int(np.rad2deg(FR_angles[1])), int(np.rad2deg(FR_angles[2])),
-                                 int(np.rad2deg(FL_angles[0])), int(np.rad2deg(FL_angles[1])), int(np.rad2deg(FL_angles[2])),
-                                 int(np.rad2deg(BR_angles[0])), int(np.rad2deg(BR_angles[1])), int(np.rad2deg(BR_angles[2])),
-                                 int(np.rad2deg(BL_angles[0])), int(np.rad2deg(BL_angles[1])), int(np.rad2deg(BL_angles[2])))
+        comando = "<{0}#{1}#{2}#{3}#{4}#{5}#{6}#{7}#{8}#{9}#{10}#{11}#>"  # Input
+        command = comando.format(int(FR_angles[0]), int(FR_angles[1]), int(FR_angles[2]),
+                                 int(FL_angles[0]), int(FL_angles[1]), int(FL_angles[2]),
+                                 int(BR_angles[0]), int(BR_angles[1]), int(BR_angles[2]),
+                                 int(BL_angles[0]), int(BL_angles[1]), int(BL_angles[2]))
         self.arduino.write(bytes(command, encoding='utf8'))  # Send a command to Arduino
 
         # print(command)

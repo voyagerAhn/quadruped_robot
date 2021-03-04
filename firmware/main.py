@@ -13,7 +13,7 @@ from src.State import State
 from multiprocessing import Process
 #from src.HardwareInterface import HardwareInterface
 
-angle_offset = np.array([[0,0,0,0],[-23,-23,-23,-23],[46,46,46,46]])
+angle_offset = np.array([[0,0,0,0],[-23,-23,-23,-23],[69,69,69,69]])
 
 def consoleClear():
     # for windows
