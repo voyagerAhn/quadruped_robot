@@ -49,15 +49,15 @@ int MOTOR10;
     int BR_HIP = constrain(map(b,-60,60,198,416),198,416);     //mg-996r  mid 307     //motor 6
     int LEFT_HIP = constrain(map(b,60,-60,210,390),210,390);   //mg-996r  mid 300     //motor 3, 9
  
-
-    //LEG MOTOR PWM
-    pwm.setPWM(1,0,MOTOR1);   //motor1
-    pwm.setPWM(2,0,MOTOR2);   //motor2
-    pwm.setPWM(4,0,MOTOR4);   //motor4
-    pwm.setPWM(5,0,MOTOR5);   //motor5
-    
-    pwm.setPWM(7,0,MOTOR7);   //motor7
-    pwm.setPWM(8,0,MOTOR8);   //motor8
+//
+//    //LEG MOTOR PWM
+//    pwm.setPWM(1,0,MOTOR1);   //motor1
+//    pwm.setPWM(2,0,MOTOR2);   //motor2
+//    pwm.setPWM(4,0,MOTOR4);   //motor4
+//    pwm.setPWM(5,0,MOTOR5);   //motor5
+//    
+//    pwm.setPWM(7,0,MOTOR7);   //motor7
+//    pwm.setPWM(8,0,MOTOR8);   //motor8
     pwm.setPWM(10,0,MOTOR10); //motor10
     pwm.setPWM(11,0,MOTOR11);  //motor11
   
